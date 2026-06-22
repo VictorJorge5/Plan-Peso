@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="115" fill="#1e40af"/>
+  <text y="360" x="256" text-anchor="middle" font-size="300" font-family="system-ui">💪</text>
+  <rect x="48" y="400" width="416" height="60" rx="14" fill="rgba(255,255,255,0.15)"/>
+  <text y="444" x="256" text-anchor="middle" font-size="38" font-weight="700" font-family="system-ui,-apple-system,sans-serif" fill="white" letter-spacing="1">PLAN PESO</text>
+</svg>
