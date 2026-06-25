@@ -481,6 +481,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Robot
       <div class="set-info"><div class="set-name">Editar perfil</div><div class="set-sub">Cambiar nombre u objetivo</div></div>
       <button class="set-btn" onclick="editProfile()">✏️ Editar</button>
     </div>
+    <div class="set-row">
+      <div class="set-info"><div class="set-name" style="color:var(--R)">Borrar todos los datos</div><div class="set-sub">Vuelve al onboarding inicial</div></div>
+      <button class="set-btn" style="color:var(--R);border-color:var(--R)" onclick="resetApp()">🗑️ Borrar</button>
+    </div>
     <input type="file" id="imp" accept=".json" style="display:none" onchange="importData(event)">
   </div>
 </div>
@@ -917,6 +921,13 @@ function copyShop(){
   const items=Array.from(document.querySelectorAll('.shi')).map(e=>e.textContent.trim());
   navigator.clipboard.writeText(`Lista compra — Semana ${mealWk}\n\n${items.map(i=>'• '+i).join('\n')}`)
     .then(()=>toast('✓ Lista copiada')).catch(()=>toast('No se pudo copiar'));
+}
+
+/* ══ RESET ════════════════════════════════════════════════════════ */
+function resetApp(){
+  if(!confirm('¿Seguro? Se borrarán todos los datos y el progreso guardado.'))return;
+  localStorage.removeItem(KEY);
+  location.reload();
 }
 
 /* ══ EXPORT / IMPORT ═════════════════════════════════════════════ */
